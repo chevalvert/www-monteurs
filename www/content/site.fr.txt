@@ -1,0 +1,65 @@
+Title: Les Monteurs Associés
+
+----
+
+Text: 
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Social: 
+
+- 
+  text: contact
+  url: /contact
+  blank: 'false'
+- 
+  text: newsletter
+  url: 'https://monteursassocies.us7.list-manage.com/subscribe?u=f32f9518d86508706cdadbd76&id=49556d9f73'
+  blank: 'true'
+- 
+  text: facebook
+  url: >
+    https://www.facebook.com/MonteursAssocies/
+  blank: 'true'
+- 
+  text: twitter
+  url: https://twitter.com/LesMonteursAsso
+  blank: 'true'
+
+----
+
+Misc: 
+
+- 
+  text: adhésion
+  url: /adhesion
+  blank: 'false'
+- 
+  text: crédits
+  url: /credits
+  blank: 'false'
+
+----
+
+Mailto: arnaud@chevalvert.fr
+
+----
+
+Redirect404: http://archives.monteursassocies.com
+
+----
+
+Redirections: 
+
+- 
+  from: >
+    http://www.monteursassocies.com/2007/03/15/contacts/
+  to: contact

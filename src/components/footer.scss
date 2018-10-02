@@ -1,0 +1,35 @@
+.footer {
+  @include font-size('link');
+  background-color: $color--black;
+  color: $color--white;
+  padding: $gutter;
+
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    display: inline-block;
+    & + li { margin-left: $gutter }
+  }
+
+  a { @include easing($easing-duration, color) }
+  &:hover a:not(:hover) { color: $color--transparent-white }
+
+  @include layout (print) { display: none }
+  @include layout (mobile) {
+    nav {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    nav + nav {
+      text-align: right;
+    }
+
+    li {
+      display: block;
+      margin-bottom: 1em;
+      margin-left: 0 !important;
+    }
+  }
+}

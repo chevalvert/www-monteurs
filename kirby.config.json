@@ -1,0 +1,25 @@
+{
+  "modules": {
+    "core": "https://github.com/getkirby/kirby.git",
+    "panel": "https://github.com/getkirby/panel.git",
+    "fields": {
+      "markdown": "https://github.com/JonasDoebertin/kirby-visual-markdown.git",
+      "previewfiles": "https://github.com/brocessing/kirby-previewfiles.git"
+    },
+    "plugins": {
+      "typography": "https://github.com/fabianmichael/kirby-typography.git",
+      "focus": "https://github.com/flokosiol/kirby-focus.git",
+      "updateid": "https://github.com/brocessing/kirby-updateid.git",
+      "kirby-index-field": "https://github.com/jongacnik/kirby-index-field.git",
+      "controlledlist": "https://github.com/rasteiner/controlledlist.git",
+      "field-multiselect": "https://github.com/pqml/field-multiselect.git",
+      "field-switch": "https://github.com/distantnative/field-switch.git",
+      "hidebar": "https://github.com/jongacnik/kirby-hidebar-field.git",
+      "kirby-hidebar-field": "https://github.com/jongacnik/kirby-hidebar-field.git"
+    },
+    "tags": {},
+    "widgets": {
+      "kirby-backup-widget": "https://github.com/arnaudjuracek/kirby-backup-widget.git"
+    }
+  }
+}

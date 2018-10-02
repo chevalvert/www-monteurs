@@ -1,0 +1,49 @@
+title: Page statique
+icon: file-text
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: true
+
+pages: false
+files:
+  fields:
+    _file: _file
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+    required: true
+    width: 2/4
+
+  date:
+    label: Date de publication
+    type: date
+    format: DD/MM/YYYY
+    default: today
+    width: 1/4
+
+  showDate:
+    label: Afficher la date
+    type:  switch
+    width: 1/4
+    texts:
+      - Date affichée
+      - Date masquée
+
+  description:
+    label: Chapô (optionnel)
+    type: markdown
+
+  text:
+    label: Texte
+    type: markdown
+
+  attachments: _attachments

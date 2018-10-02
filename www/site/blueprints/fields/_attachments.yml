@@ -1,0 +1,18 @@
+label: Liens et fichiers joints
+style: table
+type: structure
+fields:
+  text:
+    label: Texte du lien (optionnel)
+    type: text
+    icon: font
+  url:
+    label: URL du lien…
+    type: url
+    width: 1/2
+  file:
+    label: …ou fichier
+    type: select
+    options: files
+    width: 1/2
+

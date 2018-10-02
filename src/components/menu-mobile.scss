@@ -1,0 +1,78 @@
+$menu-mobile__logo--height: 2.2rem;
+$menu-mobile__links--spacing: 0.3rem;
+
+.menu-mobile {
+  z-index: 3;
+  position: fixed;
+  background: $color--black;
+  color: $color--white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 $gutter;
+  height: $_menu--height;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  @include layout(mobile) { display: flex }
+
+  &__logo {
+    height: $menu-mobile__logo--height;
+
+    svg {
+      fill: $color--white;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__toggle-label {
+    font-size: $menu-mobile__logo--height * 1.6;
+    margin-bottom: -0.21rem;
+
+    &::after { content: '\2261' }
+  }
+
+  &__nav {
+    @include easing($easing-duration, opacity);
+
+    position: fixed;
+    top: $_menu--height;
+    left: 0;
+    right: 0;
+    background: $color--black;
+    background-clip: padding-box;
+    border-bottom: 100vh solid $color--transparent-lightgray;
+    opacity: 1;
+
+    &-items {
+      margin: -$menu-mobile__links--spacing 0;
+      padding: $gutter;
+      padding-top: 0;
+    }
+
+    &-item {
+      padding: $menu-mobile__links--spacing;
+      text-transform: uppercase;
+    }
+
+    .searchform {
+      background-color: $color--lightgray;
+      padding: $gutter;
+      border: none;
+
+      &__input { @include font-size('sidebar') }
+    }
+  }
+
+
+  &__toggle:checked ~ &__toggle-label::after { content: '\00d7' }
+  &__toggle:checked ~ .main { opacity: 0.1 }
+
+  &__toggle:not(:checked) ~ &__nav {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+}

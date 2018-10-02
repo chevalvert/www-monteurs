@@ -1,0 +1,96 @@
+.main {
+  &__header {
+    display: flex;
+    background: $color--dynamic;
+    color: $color--white;
+    padding: $gutter;
+
+    @include layout (print) {
+      background: transparent;
+      padding: 0;
+    }
+
+    &-pusher {
+      width: 33.333%;
+      @include layout (mobile, print) { display: none }
+    }
+
+    &-content {
+      width: 66.666% ;
+      margin-left: $gutter;
+      max-width: $_content--max-width;
+
+      @include layout (compact) { width: auto }
+
+      @include layout (mobile) {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @include layout (print) {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 50ch;
+      }
+    }
+
+    &-title {
+      @include font-size('h1');
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    &-description {
+      margin-top: 1em;
+    }
+
+    a {
+      color: $color--white;
+      border-color: inherit;
+    }
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    padding: $gutter;
+
+    @include layout (mobile) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__sidebar {
+    width: 33.333%;
+
+    @include layout (print) { display: none }
+    @include layout (mobile) {
+      width: 100%;
+      margin-top: -1px;
+      background-color: $color--dynamic;
+      padding: $gutter;
+      * { color: $color--white }
+    }
+  }
+
+  &__sidebar + &__content {
+    flex: 1;
+    width: 66.666%;
+    margin-left: $gutter;
+    max-width: $_content--max-width;
+    @include layout (mobile) {
+      width: 100%;
+      margin-left: 0;
+      max-width: 100%;
+      padding: $gutter;
+    }
+
+    @include layout (print) {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 50ch;
+    }
+  }
+}

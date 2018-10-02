@@ -1,0 +1,17 @@
+Title: Accueil
+
+----
+
+Text: 
+
+----
+
+Content: 
+
+----
+
+Featured: actualites/dans-le-secret-de-la-salle-de-montage
+
+----
+
+Pinned: actualites/dans-le-secret-de-la-salle-de-montage, actualites/enquete-les-assistant-e-s-aujourd-hui

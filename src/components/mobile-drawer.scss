@@ -1,0 +1,11 @@
+.mobile-drawer {
+  position: fixed;
+  top: $_menu--height;
+  left: 0;
+  right: 0;
+  max-height: calc(75% - #{$_menu--height});
+  overflow-y: scroll;
+
+  @include easing($easing-duration, transform);
+  &:not(.is-open) { transform: translateY(-100%) }
+}

@@ -1,0 +1,16 @@
+@mixin font-size ($key) {
+  $size: map-get($font-size, $key);
+  $default: map-get($size, 'default');
+
+  @each $layout-name, $layout-size in $size {
+    @if ($layout-name == 'default') {
+      font-size: nth($layout-size, 1);
+      line-height: nth($layout-size, 2);
+    } @else {
+      @include layout (#{$layout-name}) {
+        font-size: nth($layout-size, 1);
+        line-height: nth($layout-size, 2);
+      }
+    }
+  }
+}

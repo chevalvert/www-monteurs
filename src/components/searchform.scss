@@ -1,0 +1,31 @@
+.searchform {
+  @include font-size('h1');
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $color--white;
+
+  &__input {
+    @include reset-input;
+    background-color: transparent;
+    flex: 1;
+    color: $color--white;
+    font-weight: bold;
+    padding-right: 1rem;
+    text-overflow: ellipsis;
+  }
+
+  &__button {
+    @include reset-input;
+    background: transparent;
+    cursor: pointer;
+    height: 100%;
+
+    svg {
+      width: auto;
+      height: 0.75em;
+      fill: $color--white;
+    }
+  }
+}

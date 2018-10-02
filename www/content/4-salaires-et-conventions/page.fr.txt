@@ -1,0 +1,64 @@
+Previewfiles: 
+
+----
+
+Title: Salaires et conventions
+
+----
+
+Date: 2018-10-03
+
+----
+
+Introduction: 
+
+Qu’ils soient embauchés en CDI ou en CDDU (CDD d’usage dit « intermittent »), les monteurs dépendent de plusieurs secteurs d’activité et donc de différentes conventions collectives dans lesquelles se trouvent — entre autres dispositions — les grilles salariales et les dénominations de fonctions (avec ou sans définition selon les textes conventionnels).
+
+Il est primordial de connaître le secteur d’activité de son employeur pour savoir de quelle convention collective on dépend.
+
+Les principales conventions collectives nationales concernant le montage sont : la convention de la production cinématographique, la convention de la production audiovisuelle, la convention de la prestation technique (officiellement nommée : convention collective des entreprises techniques au service de la création et de l’événement), l’accord collectif national – branche de la télédiffusion, et la convention collective de la production de films d’animation.
+
+Nous ne donnons ici des précisions que pour les trois premières conventions. Pour se renseigner sur les autres, nous vous invitons à prendre contact avec les syndicats d’employés ou à consulter le site Légifrance.
+
+Dans nos secteurs il existe deux syndicats de salariés : le (link: https://spiac-cgt.org/ text: Spiac-CGT) et le (link: http://sntpct.fr/ text: SNTPCT).
+
+Sur le site de (link: https://www.legifrance.gouv.fr/initRechConvColl.do text: Légifrance) vous trouverez les textes des conventions collectives.
+
+----
+
+Hr1: 
+
+----
+
+Text: 
+
+# Secteur cinéma
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bona autem corporis huic sunt, quod posterius posui, similiora. Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. Si de re disceptari oportet, nulla mihi tecum, Cato, potest esse dissensio. Respondeat totidem verbis. Quis Pullum Numitorium Fregellanum, proditorem, (link: http://google.com text: quamquam rei publicae nostrae) profuit, non odit? Duo Reges: constructio interrete. Apparet statim, quae sint officia, quae actiones. Ut proverbia non nulla veriora sint quam vestra dogmata.
+
+|    | salaire minimum hebdomadaire 39 heures | salaire minimum journalier 8 heures*|
+|---|---|---|
+| Chef monteur spécialisé | 1 331,49 € | 295,89 € |
+| Chef monteur | 1 167,75 € |295,50 € |
+
+\* Pour un contrat de travail égal ou inférieur à 4 jours. Il s'agît du salaire hebdomadaire de 39 heures divisé par 4,5.
+
+----
+
+Attachment: 
+
+- 
+  text: ""
+  url: ""
+  file: chevalvert.png
+
+----
+
+Showdate: false
+
+----
+
+Description: 
+
+----
+
+Attachments: 

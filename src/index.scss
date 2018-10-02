@@ -1,0 +1,103 @@
+@import 'sass/reset';
+@import 'sass/fonts';
+@import 'sass/helpers';
+
+$layouts: (
+  'mobile': 800px,
+  'compact': 1280px,
+  'full': max,
+); @import 'sass/layouts';
+
+$font-size: (
+  'h1': (
+    'default': (3rem, 3.6rem),
+    'mobile': (2.4rem, 2.8rem),
+    'print': (18pt, 20pt)
+  ),
+  'h2': (
+    'default': (2rem, 2rem),
+    'mobile': (1.8rem, 2.2rem),
+    'print': (16pt, 18pt)
+  ),
+  'h3': (
+    'default': (1.6rem, 2rem),
+    'print': (14pt, 16pt)
+  ),
+  'text': (
+    'default': (1.8rem, 2.4rem),
+    'print': (12pt, 15pt),
+  ),
+  'quote': (
+    'default': (1.6rem, 2.4rem),
+    'print': (12pt, 15pt),
+  ),
+  'table': (
+    'default': (1.6rem, 1.4em),
+    'print': (12pt, 15pt),
+  ),
+  'sidebar': (
+    'default': (2rem, 2.6rem),
+  ),
+  'link': (
+    'default': (1.6rem, 1),
+  ),
+  'label': (
+    'default': (1.2rem, 1em)
+  )
+); @import 'sass/font-size';
+
+$color--white: #FFFFFF;
+$color--black: #000000;
+$color--darkgray: #2F312F;
+$color--lightgray: #A0A0A0;
+$color--blue: #4200FA;
+$color--lightblue: #38B4FF;
+$color--green: #00BE40;
+$color--yellow: #FFB400;
+$color--red: #F83053;
+$color--transparent-white: rgba(255, 255, 255, 0.627);
+$color--transparent-lightgray: rgba($color--darkgray, 0.9);
+// NOTE: $color--dynamic can be set font side using CSS var `--color`
+:root { --color: #{$color--black} }
+$color--dynamic: var(--color, $color--black);
+
+$theme--colors: (
+  'qui-sommes-nous': $color--blue,
+  'actualites': $color--red,
+  'publications': $color--green,
+  'salaires-et-conventions': $color--lightblue,
+  'ressources': $color--yellow
+); @import 'sass/color-theme';
+
+:root {
+  --gutter: 4rem;
+  --half-gutter: 2rem;
+  @include layout (mobile) {
+    --gutter: 2rem;
+    --half-gutter: 1rem;
+  }
+}
+$gutter: var(--gutter, 4rem);
+$half-gutter: var(--half-gutter, 2rem);
+
+$_menu--height: 84px;
+$_content--max-width: 70rem;
+
+$easing-duration: 200ms;
+
+@import 'sass/base';
+@import 'sass/vendors/kirby-typography';
+
+@import 'components/article';
+@import 'components/article-figure';
+@import 'components/featured';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/label';
+@import 'components/main';
+@import 'components/menu';
+@import 'components/menu-mobile';
+@import 'components/mobile-drawer';
+@import 'components/publications';
+@import 'components/searchform';
+@import 'components/sidebar';

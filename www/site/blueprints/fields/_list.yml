@@ -1,0 +1,44 @@
+type: group
+
+fields:
+  # hidebar:
+  #   type: hidebar
+
+  title:
+    label: Titre
+    type:  text
+    required: true
+
+  pageindex:
+    label: Articles
+    type: index
+    options: children
+    filter: PanelHelpers::beautifyPages
+    order: desc
+    addedit: true
+    columns:
+      parsedDate:
+        label: Date
+        width: 100
+      parsedVisibility:
+        label: Statut
+        width: 20
+      title: Titre
+      categories: Catégorie(s)
+
+  hr:
+    type: line
+
+  categories:
+    label: Catégories
+    type: structure
+    modalsize: large
+    style: table
+    fields:
+      title:
+        label: Titre de catégorie
+        type: text
+      description:
+        label: Description de la catégorie (optionnel)
+        type: markdown
+

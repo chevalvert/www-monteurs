@@ -1,0 +1,64 @@
+* { box-sizing: border-box }
+
+html {
+  font-size: 62.5%;
+}
+body {
+  @include font-size('text');
+  font-family: 'Akkurat', Calibri, 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // NOTE: setting body bgcolor the same as menu & footer for elastic scroll
+  // The real bgcolor is set in <main>
+  background: $color--black;
+  color: $color--black;
+
+  // NOTE: this is for the sticky footer
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &.is-loading::after { opacity: 1 }
+  &::after {
+    @include easing($easing-duration, opacity);
+    @include progress-loader(2px, 75vw, $color--white);
+    position: fixed;
+    z-index: 3;
+    opacity: 0;
+  }
+
+  @include layout (print) { background: transparent }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ pre {
+  width: 100%;
+  overflow: auto;
+  padding: 1rem;
+  margin: 1em 0;
+  background-color: #EEE;
+  color: $color--black;
+  border-radius: 3px;
+}
+
+main {
+  flex: 1;
+  background-color: $color--white;
+  margin-top: $_menu--height;
+
+  @include layout (print) {
+    margin-top: 0;
+    * { color: $color--black !important }
+  }
+}
+
+.medium-zoom-overlay { z-index: 2 }
+.medium-zoom-image--opened { z-index: 2 }

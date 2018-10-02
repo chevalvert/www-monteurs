@@ -1,0 +1,194 @@
+$featured__banner--scroll-animation--duration: (100s, 50s);
+
+@keyframes featured__banner-scroll-animation--left {
+  0% { transform: translate3d(0%, 0, 0) }
+  100% { transform: translate3d(-50%, 0, 0) }
+}
+
+@keyframes featured__banner-scroll-animation--right {
+  0% { transform: translate3d(-50%, 0, 0) }
+  100% { transform: translate3d(0%, 0, 0) }
+}
+
+.featured {
+  height: 100%;
+  color: $color--white;
+
+  // NOTE: this wrapper is for above the fold content, aka &__hero and &__banner
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: calc(100vh - #{$_menu--height});
+
+    @include layout (mobile) { height: auto }
+  }
+
+  &__hero {
+    flex: 1;
+
+    &-items {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+    }
+
+    &-item {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+
+      // NOTE: layout when 2 items
+      & + & {
+        flex: none;
+        width: 50%;
+      }
+
+      &:nth-child(even) { background-color: $color--blue }
+      &:nth-child(odd) { background-color: $color--red }
+
+      .label {
+        position: absolute;
+        top: $gutter;
+        left: $gutter;
+      }
+
+      &-link {
+        height: 100%;
+        display: flex;
+        // NOTE: reversing &-cover and &-title order
+        flex-direction: column-reverse;
+      }
+
+      &-title {
+        flex: 1;
+        line-height: 1;
+        padding: $gutter;
+        margin-top: 3rem;
+
+        width: 100%;
+        height: 100%;
+
+        @include layout (mobile) {
+          font-size: 10vh;
+          line-height: 1.1
+        }
+      }
+
+      &-cover + &-title {
+        flex: 0;
+        @include font-size('h1');
+        text-transform: uppercase;
+
+      }
+
+      &-cover {
+        flex: 1;
+        // NOTE: background-position is declared inline using kirby-focus
+        background-size: cover;
+      }
+    }
+  }
+
+  &__banner {
+    height: min-content;
+    display: flex;
+    justify-content: flex-start;
+    width: min-content;
+    will-change: transform;
+
+    // ???
+    // &:hover { animation-play-state: paused !important }
+
+    &:nth-child(even) { animation: featured__banner-scroll-animation--left nth($featured__banner--scroll-animation--duration, 1) linear infinite }
+    &:nth-child(even) &-item { @include cicada((background-color, ($color--green, $color--yellow, $color--blue, $color--lightblue, $color--red))) }
+
+    &:nth-child(odd) { animation: featured__banner-scroll-animation--left nth($featured__banner--scroll-animation--duration, 2) linear infinite }
+    &:nth-child(odd) &-item { @include cicada((background-color, ($color--green, $color--blue, $color--red ))) }
+
+    &-items {
+      display: flex;
+      transform: translate3d(0, 0, 0);
+
+      & + & { margin-left: -1px }
+    }
+
+    &-item {
+      @include font-size('h2');
+      line-height: 1em;
+      background-color: $color--blue;
+      display: inline-block;
+      white-space: nowrap;
+      padding: 1em;
+      text-transform: uppercase;
+    }
+
+    @include layout (mobile) {
+      animation-play-state: paused !important;
+      width: 100%;
+      flex-wrap: wrap;
+      &-items {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:not(:first-child) { display: none }
+      }
+      &-item {
+        font-size: smaller;
+        padding: $gutter;
+        width: 100%;
+      }
+    }
+  }
+
+  &__members {
+    background-color: $color--black;
+
+    &-header {
+      @include font-size('label');
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: $gutter;
+    }
+
+    &-items {
+      display: flex;
+      line-height: 0;
+      padding: 0 $half-gutter;
+    }
+
+    &-item {
+      flex: 1;
+      margin: 0 $half-gutter;
+
+      background-color: $color--black;
+
+      img {
+        width: 100%;
+        height: auto;
+
+        @include layout (full, compact) {
+          @include easing($easing-duration, filter);
+          filter: opacity(0.75) grayscale(1);
+        }
+      }
+      &:hover img { filter: opacity(1) grayscale(0) }
+    }
+
+    @include layout (mobile) {
+      &-items {
+        flex-wrap: wrap;
+        padding: 0 $half-gutter;
+      }
+
+      &-item {
+        flex: 33.333%;
+        margin-bottom: $gutter;
+      }
+    }
+  }
+}

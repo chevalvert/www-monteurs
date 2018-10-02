@@ -1,0 +1,29 @@
+.label {
+  @include font-size('label');
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+
+  pointer-events: none;
+  a { pointer-events: auto }
+
+  &__translation {
+    @include layout (print) { display: none }
+  }
+
+  &__time + &__categories::before { content: '\2014' }
+
+  &__category + &__category::before {
+    white-space: pre;
+    margin-left: -.2em;
+    content: ', ';
+  }
+
+  &:hover &__time,
+  &:hover *::before,
+  &:hover &__category:not(:hover) {
+    @include easing($easing-duration, opacity);
+    opacity: 0.5;
+  }
+}

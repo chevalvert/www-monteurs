@@ -1,0 +1,54 @@
+Title: Qui sommes-nous ?
+
+----
+
+Introduction: hello les zozos
+
+----
+
+Pageindex: 
+
+----
+
+Date: 2018-10-03
+
+----
+
+Text: 
+
+# Presentation
+
+This is the translation
+
+----
+
+Attachment: 
+
+----
+
+Attachments: 
+
+- 
+  text: google.com
+  url: http://google.com
+  file: ""
+- 
+  text: un fichier important
+  url: http://foo.com
+  file: ""
+- 
+  text: télécharger ce pf
+  url: http://foo.com
+  file: ""
+- 
+  text: "voir l'enquête"
+  url: http://foo.com
+  file: ""
+
+----
+
+Description: 
+
+----
+
+Showdate: false

@@ -1,0 +1,126 @@
+$hovered-link-fadedEl--selectors: p, ul, ol, table;
+
+.article {
+  margin-bottom: $gutter;
+
+  &__excerpt-link {
+    display: block;
+    text-align: right;
+    color: $color--dynamic;
+  }
+
+  &__header {
+    *:last-child { margin-bottom: 1em }
+    .label { color: $color--dynamic }
+
+    &-title {
+      @include font-size('h1');
+      text-transform: uppercase;
+    }
+
+    &-cover {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-title + &-cover { margin-top: 1em }
+  }
+
+  &__content {
+    .has-anchor { position: relative }
+    .toc-anchor {
+      position: absolute;
+      top: calc(-#{$_menu--height} - #{$gutter});
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      &:not(:first-child) { margin-top: 1em }
+      margin-bottom: 1em;
+
+      @include layout (print) { page-break-after: avoid }
+    }
+
+    h1 {
+      @include font-size('h1');
+      text-transform: uppercase;
+      &:not(:first-child) { margin-top: 2em }
+    }
+
+    h2, h3, h4, h5, h6 {
+      @include font-size('h2');
+    }
+
+    #{$hovered-link-fadedEl--selectors} {
+      @include font-size('text');
+      @include easing($easing-duration, color);
+    }
+
+    &.has-hovered-link {
+      #{$hovered-link-fadedEl--selectors} { color: $color--lightgray }
+    }
+
+    a {
+      font-weight: inherit;
+      color: $color--black;
+      padding-bottom: 1px;
+      border-bottom: 2px solid $color--dynamic;
+
+      @include layout (print) {
+        border: none;
+        text-decoration: underline;
+
+        &[href^="#"]::before {
+          content: '\00b6\00a0';
+        }
+
+        &[href^="http"]::after{
+          font-family: monospace;
+          content: ' [\2192\00a0'attr(href)']';
+        }
+      }
+    }
+
+    ol, ul {
+      padding-left: 1em;
+    }
+
+    ol { list-style: decimal outside }
+    ul { list-style: disc outside }
+
+    table {
+      @include font-size('table');
+      border-collapse: collapse;
+
+      @include layout (print) { page-break-inside: avoid }
+
+      th, td {
+        text-align: left;
+        vertical-align: middle;
+        border: 2px solid $color--dynamic;
+        padding: 1rem;
+      }
+    }
+
+    blockquote {
+      margin: 1em 0;
+      @include layout (print) { page-break-inside: avoid }
+
+      p {
+        @include font-size('quote');
+        font-style: italic;
+      }
+    }
+
+    p + table,
+    table + p,
+    p + p,
+    p + ol,
+    p + ul,
+    li + li {
+      margin-top: 1em;
+    }
+  }
+}

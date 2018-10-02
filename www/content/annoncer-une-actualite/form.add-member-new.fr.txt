@@ -1,0 +1,51 @@
+Previewfiles: 
+
+----
+
+Title: Annoncer une actualité
+
+----
+
+Date: 2018-10-15
+
+----
+
+Showdate: false
+
+----
+
+Description: 
+
+La rubrique « Actualité des adhérents » a pour but de mettre en avant le travail des membres de l’association. Ceux qui le souhaitent peuvent y présenter tous types de films : documentaires ou fictions, courts ou longs, à voir au cinéma, à la télévision, sur le web, lors de festivals…
+
+Cette initiative s’inscrit dans une démarche plus large pour valoriser notre métier, nous rendre plus visibles et mieux faire connaître l’association et la diversité de ses membres.
+
+Il vous suffit de remplir ce formulaire d’inscription, en indiquant votre mail, le titre du film, le lieu (« où » : cinéma, chaîne de télévision, festival…), la date (de sortie, de diffusion…), votre nom et votre fonction ainsi que le réalisateur et les membres de l’équipe que vous désirez citer. Si vous le souhaitez, vous pouvez ajouter quelques phrases de présentation, une photo, et un lien vers de plus amples informations.
+
+Nous nous chargerons de mettre votre actualité en ligne sur le site et sur la page (link: https://www.facebook.com/MonteursAssocies text: Facebook) associée.
+
+Si vous avez besoins de plus amples informations, ou si vous rencontrez des problèmes en remplissant le formulaire, vous pouvez nous écrire à l’adresse (email: actualite.lma@gmail.com text: actualite.lma@gmail.com).
+
+----
+
+Text: (formulaire)
+
+----
+
+Attachments: 
+
+----
+
+Success: Merci, votre actualité a bien été envoyée. Elle sera disponible d'ici peu.
+
+----
+
+Fail: Une erreur est survenu lors de l'envoi de votre actualité. Nous vous invitons à (link: contact text: nous contacter directement).
+
+----
+
+Token: QI97FAcYjO
+
+----
+
+Unauthorized: Le token que vous avez donné est invalide.

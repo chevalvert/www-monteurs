@@ -1,0 +1,72 @@
+.sidebar {
+  width: 100%;
+
+  li { color: $color--lightgray }
+
+  a {
+    @include easing($easing-duration, color);
+    &:hover,
+    &.is-active { color: $color--dynamic }
+  }
+
+  &__content {
+    @include hide-scroll__parent;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &.is-sticked {
+      position: fixed;
+      top: calc(#{$_menu--height} + #{$gutter});
+    }
+  }
+
+  &__nav {
+    @include hide-scroll__child(y);
+    flex: 1;
+
+    &-actions a {
+      color: $color--dynamic
+    }
+
+    &-actions + .toc,
+    &-actions + .filter {
+      margin-top: 1em;
+    }
+
+    &-actions,
+    .toc,
+    .filter {
+      @include font-size('sidebar');
+      text-transform: lowercase;
+    }
+  }
+
+  @include layout (mobile) {
+    * { color: $color--white !important }
+    &__nav + &__footer { margin-top: $gutter }
+  }
+
+  &__footer {
+    @include font-size('link');
+    line-height: inherit;
+
+    .pagination {
+      @include hide-scroll__parent;
+      height: 1.2em;
+
+      ul {
+        @include hide-scroll__child(x);
+        display: flex ;
+      }
+
+      li {
+        display: block;
+        & + li{ margin-left: 1em }
+      }
+    }
+
+    &-attachments {}
+  }
+}

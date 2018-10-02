@@ -1,0 +1,34 @@
+Previewfiles: 
+
+----
+
+Title: Actualités
+
+----
+
+Categories: 
+
+- 
+  title: réunions
+  description: >
+    Les Monteurs associés se réunissent
+    chaque premier mercredi du mois en
+    soirée, sauf exceptions, de septembre
+    à juin, à la Fémis (6 rue Francœur,
+    75018 Paris).
+- 
+  title: profession
+  description: ""
+- 
+  title: événements
+  description: ""
+- 
+  title: ciné-club
+  description: |
+    Les Monteurs dé-montent
+    
+    Depuis 2016, le ciné-club des Monteurs associés propose une rencontre trimestrielle avec un invité (scénariste, réalisateur, monteur, critique...), qui vient nous parler d'un film qui a particulièrement marqué son parcours et sa réflexion sur le montage au cinéma.
+    
+    Ces séances sont une belle occasion de découvrir un film, mais aussi la pensée et le regard d'une personne sur notre métier.
+    
+    L'équipe est formée de Benoit Delbove, Delphine Dumont, Juliette Haubois, Pascal Montagna, Gordana Othnin-Girard et Vincent Rinaldi.

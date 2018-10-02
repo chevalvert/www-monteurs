@@ -1,0 +1,3 @@
+@each $uri, $color in $theme--colors {
+  body[data-uri=#{$uri}] { --color: #{$color} }
+}

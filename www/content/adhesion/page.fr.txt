@@ -1,0 +1,65 @@
+Previewfiles: 
+
+----
+
+Title: Adhésion
+
+----
+
+Date: 2018-10-14
+
+----
+
+Categories: 
+
+----
+
+Introduction: 
+
+----
+
+Cover: 
+
+----
+
+Text: 
+
+**En rejoignant Les Monteurs associés (LMA), vous adhérez à une association qui défend une conception du montage et de sa pratique, exposée dans le texte « (file: lma_engagements.pdf text:Les engagements des Monteurs associés) ».**
+
+L’association est ouverte à tous les professionnels du montage âgés de plus de 18 ans.
+
+Si vous êtes monteur son et adhérent à l’AFSI, vous pouvez solliciter le tarif double adhésion AFSI/LMA de 20,00 €. Pour cela merci de contacter le secrétariat à l’adresse (email: monteursassocies@gmail.com text: monteursassocies@gmail.com).
+
+Merci de prendre connaissance des statuts de l’association, (link: qui-sommes-nous#les-statuts text: accessibles ici).
+
+**L’adhésion est valable pour l’année en cours** (c’est-à-dire du 1er janvier au 31 décembre).
+
+Pour adhérer, vous pouvez :  
+- soit (link: https://www.helloasso.com/associations/les-monteurs-associes/adhesions/adhesion-lma text: adhérer en ligne sur le site Hello Asso) ;
+- soit compléter le formulaire d’adhésion ((file: lma-adhesion-2018.pdf text:à télécharger ici)) et l’envoyer avec votre règlement à l’adresse suivante : Les Monteurs associés – c/o La fémis – 6, rue Francœur – 75018 Paris.
+
+----
+
+Attachments: 
+
+- 
+  text: "Formulaire d'adhésion en ligne"
+  url: >
+    https://www.helloasso.com/associations/les-monteurs-associes/adhesions/adhesion-lma
+  file: ""
+- 
+  text: Formulaire papier
+  url: ""
+  file: lma-adhesion-2018.pdf
+- 
+  text: Les engagements des Monteurs associés
+  url: ""
+  file: lma_engagements.pdf
+
+----
+
+Showdate: false
+
+----
+
+Description: Les membres des Monteurs associés bénéficient du rayonnement d’une communauté professionnelle. Ils partagent l’ambition commune d’une profession mieux organisée et de métiers reconnus.

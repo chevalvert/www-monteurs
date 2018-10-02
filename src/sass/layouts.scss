@@ -1,0 +1,76 @@
+/**
+ * NOTE: instead of using the confusing max-width / min-width manbo-jambo,
+ * this mixin adds a layer of abstraction based on which CSS you want to use
+ * based on a specific layout type, instead of a device ideal size, ie…
+
+  @include layout(mobile) {
+    background: red;
+  }
+
+ * …will display a red background on the corresponding mobile layout.
+ *
+ * Layouts are additive, meaning that their are built on top of the original
+ * CSS, as a desktop-first approach: use it to add specific layout on top of
+ * your original one:
+
+  body {
+    background: black;
+    @include layout(mobile) {
+      background: red;
+    }
+  }
+
+ * …will always display a black background, except when the mobile layout is
+ * active.
+ *
+ * Calls order isn't important, as the corresponding breakpoints are stricly
+ * circled by max-width and min-width:
+
+    @include layout(mobile) { background: red; }
+    @include layout(compact) { background: blue; }
+
+ * …is the same than
+
+  @include layout(compact) { background: blue; }
+  @include layout(mobile) { background: red; }
+
+ * Note that you will need however to sort your layouts map by asc size :
+
+  $layouts: (
+    mobile: 600px
+    compact: 1200px,
+    full: max
+  );
+
+ * Finally, you can define multiple layouts with one call:
+
+  @include layout(mobile, compact) {
+    background: blue;
+  }
+
+ */
+
+@mixin layout ($layout-keys...) {
+
+  @if index($layout-keys, print) {
+    @media print {
+      @content ;
+    }
+  }
+
+
+  $psize: 0px;
+  @each $name, $size in $layouts {
+    @if ($size == max) {
+      @if index($layout-keys, $name) {
+        @media only screen and (min-width: #{$psize}) { @content ; }
+      }
+    }
+    @else {
+      @if index($layout-keys, $name) {
+        @media only screen and (min-width: #{$psize}) and (max-width: #{$size}) { @content ; }
+      }
+      $psize: $size + 1px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.form {
+  @include font-size('text');
+  position: relative;
+
+  &__anchor {
+    @include invisible;
+    top: calc(-#{$_menu--height} - #{$gutter});
+  }
+
+  &__honeypot { @include invisible }
+
+  &__result-success,
+  &__result-fail {
+    @include font-size('h2');
+    margin-bottom: $gutter;
+  }
+
+  &__result-fail {
+    color: $color--red;
+
+    pre {
+      color: $color--red;
+      background-color: rgba($color--red, 0.1);
+    }
+  }
+
+  &__field {
+    @include font-size('text');
+
+    & + & { margin-top: 1em }
+    &:focus-within &-label { color: $color--dynamic }
+
+    &-label,
+    &-error {
+      @include font-size('label');
+      @include easing($easing-duration, color);
+      color: $color--lightgray;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-error {
+      margin-top: 1em;
+      display: block;
+    }
+
+    &-textarea,
+    &-input {
+      @include reset-input;
+      @include font-size('sidebar');
+      @include easing($easing-duration, border-color);
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      height: auto;
+      padding: 1rem;
+      border: 2px solid $color--lightgray;
+
+      &:hover, &:focus {
+        border-color: $color--dynamic;
+      }
+
+      &[readonly] {
+        pointer-events: none;
+        color: $color--lightgray;
+      }
+    }
+
+    &-submit {
+      @include reset-input;
+      @include font-size('sidebar');
+      @include easing($easing-duration, (background, color));
+      background: $color--dynamic;
+      border: 2px solid $color--dynamic;
+      color: $color--white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 1rem;
+      height: auto;
+      cursor: pointer;
+
+      &:hover {
+        background: $color--white;
+        color: $color--dynamic;
+      }
+    }
+
+    &-error,
+    &.has-error &-label {
+      color: $color--red;
+    }
+
+    &.has-error &-input,
+    &.has-error &-textarea {
+      border-color: $color--red;
+    }
+  }
+}
