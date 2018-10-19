@@ -10,7 +10,7 @@ Description:
 
 ----
 
-Keywords: 
+Keywords: monteurs,montage,association
 
 ----
 
@@ -42,6 +42,14 @@ Misc:
   text: adhésion
   url: /adhesion
   blank: 'false'
+- 
+  text: plan du site
+  url: /sitemap
+  blank: 'false'
+- 
+  text: rss
+  url: /feed
+  blank: 'true'
 - 
   text: crédits
   url: /credits

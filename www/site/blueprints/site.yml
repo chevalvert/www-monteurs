@@ -25,7 +25,7 @@ fields:
     icon: search
     help: Utilisé par les moteurs de recherches et les réseaux sociaux
     validate:
-      maxLength: 160
+      maxLength: 150
 
   keywords:
     label: Mots-clefs

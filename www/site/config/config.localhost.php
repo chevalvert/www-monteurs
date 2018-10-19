@@ -2,7 +2,8 @@
   c::set([
     'debug' => true,
     'cache' => false,
-    'ssl' => false
+    'ssl' => false,
+    'plugin.html.minifier.active' => false
   ]);
 
   // The code below are required for the kirby-webpack dev server to work

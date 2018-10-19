@@ -28,7 +28,9 @@ export default ({
   const parseResponse = Barba.Pjax.Dom.parseResponse
   Barba.Pjax.Dom.parseResponse = function (response) {
     const parser = new DOMParser()
-    cloneAttributes(parser.parseFromString(response, 'text/html').body, document.body)
+    const html = parser.parseFromString(response, 'text/html')
+    cloneAttributes(html.documentElement, document.documentElement)
+    cloneAttributes(html.body, document.body)
     return parseResponse.apply(Barba.Pjax.Dom, arguments)
   }
 

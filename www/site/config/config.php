@@ -4,9 +4,20 @@
 
 // Core config
 c::set([
-  'error' => 'erreur',
-  'cache' => true,
   'ssl' => true,
+  'error' => 'erreur',
+
+  'cache' => true,
+  'cache.ignore' => ['sitemap', 'feed'],
+
+  'sitemap.ignore' => [
+    'home',
+    'feed',
+    'annoncer-une-actualite',
+    'sitemap',
+    'erreur',
+    'backups'
+  ],
 
   'panel.kirbytext' => true,
   'smartypants' => true,
@@ -82,6 +93,9 @@ c::set([
     'typography' => false,
     'kirby-backup-widget' => true
   ],
+
+  'plugin.html.minifier.active' => true,
+  'plugin.html.minifier.blacklist' => ['feed', 'sitemap'],
 
   'typography.punctuation.spacing.french' => true,
   'typography.dashes.style' => 'em',
