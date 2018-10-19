@@ -83,15 +83,14 @@ c::set([
 
 // Thrid party configs
 c::set([
-  // BUG: isn't working in local env
-  'panel.widgets', [
-    'pages'    => false,
-    'site'     => false,
+  'panel.widgets' => [
+    'site'     => true,
+    'pages'    => true,
+    'account'  => true,
     'quickadd-widget' => true,
-    'account'  => false,
-    'history'  => false,
-    'typography' => false,
-    'kirby-backup-widget' => true
+    'kirby-backup-widget' => true,
+    'history'  => true,
+    'typography' => false
   ],
 
   'plugin.html.minifier.active' => true,
