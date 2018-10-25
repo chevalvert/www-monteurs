@@ -32,14 +32,6 @@ fields:
     type: tags
     help: Utilisé par les moteurs de recherches et les réseaux sociaux
 
-  redirect404:
-    label: Redirection en cas de page non-trouvée
-    type: url
-    placeholder: archives.monteursassocies.com
-    help: >
-      Si monteursassocies.com/<b>une-ancienne-page</b> n'existe pas,
-      le visiteur est redirigé vers archives.monteursassocies.com/<b>une-ancienne-page</b>
-
   redirections:
     label: Redirections spécifiques
     type: structure

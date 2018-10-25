@@ -61,7 +61,7 @@ Mailto: arnaud@chevalvert.fr
 
 ----
 
-Redirect404: http://archives.monteursassocies.com
+Redirect404: 
 
 ----
 
