@@ -90,12 +90,7 @@ $menu__logo-full--width: $menu__logo--height * (167.7 / 15);
     max-width: 75vw;
     margin-left: $gutter;
 
-    @include layout (compact) {
-      max-width: 100vw;
-      overflow-x: scroll;
-      overflow-y: hidden;
-    }
-
+    @include layout (compact) { max-width: 100vw }
     @include layout (print) { display: none }
 
     &-items {
