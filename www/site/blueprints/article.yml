@@ -10,9 +10,8 @@ options:
 
 pages: false
 files:
-  files:
-    fields:
-      _file: _file
+  fields:
+    _file: _file
 
 fields:
   previewfiles:
