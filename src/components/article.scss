@@ -49,6 +49,10 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       &:not(:first-child) { margin-top: 2em }
     }
 
+    h2 {
+      text-transform: uppercase;
+    }
+
     h2, h3, h4, h5, h6 {
       @include font-size('h2');
     }
@@ -83,16 +87,23 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       }
     }
 
+    p { margin: 1em 0 }
+
     ol, ul {
       padding-left: 1em;
+      margin: 1em 0;
     }
 
     ol { list-style: decimal outside }
     ul { list-style: disc outside }
 
+    li { margin: 0 0.5em }
+
     table {
       @include font-size('table');
       border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
 
       @include layout (print) { page-break-inside: avoid }
 
@@ -112,15 +123,6 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
         @include font-size('quote');
         font-style: italic;
       }
-    }
-
-    p + table,
-    table + p,
-    p + p,
-    p + ol,
-    p + ul,
-    li + li {
-      margin-top: 1em;
     }
   }
 }
