@@ -29,8 +29,9 @@ $featured__banner--scroll-animation--duration: (100s, 50s);
 
     &-items {
       display: flex;
-      align-items: stretch;
       height: 100%;
+      align-items: stretch;
+      @include layout (mobile) { flex-direction: column }
     }
 
     &-item {
@@ -43,6 +44,7 @@ $featured__banner--scroll-animation--duration: (100s, 50s);
       & + & {
         flex: none;
         width: 50%;
+        @include layout (mobile) { width: 100% }
       }
 
       &:nth-child(even) { background-color: $color--blue }
