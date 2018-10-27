@@ -1,49 +1,50 @@
+<?php
+  $ratio = isset($ratio) ? $ratio : $image->ratio();
+  $width = min(isset($width) ? $width : 700, $image->width());
+  $height = isset($height) ? $height : $width / $ratio;
+  $quality = isset($quality) ? $quality : 80;
+
+  $thumbnail = $image->focusCrop($width, $height, compact('quality'));
+
+  $zoomable = isset($zoomable) && $zoomable;
+  $preview = $zoomable && $ratio != $image->ratio();
+  if ($preview) $fullscreen = $image->thumb(['width' => 2000]);
+?>
+
 <figure class="article-figure <?= isset($class) ? $class : '' ?>">
   <?php
-    $resized = $image->thumb(['width' => 2000]);
-    $caption = $image->caption()->isNotEmpty() ? $image->caption() : null;
-    $zoomable = isset($zoomable) && $zoomable;
-    $preview = isset($preview) && $preview;
+  $img = snippet('image', [
+    'lazy' => true,
+    'class' => 'article-figure__image',
+    'image' => $thumbnail,
+    'alt' => isset($caption) ? $caption : $image->caption()
+  ], true);
+
+  // NOTE: wrap img element inside a link if $zoomable is set to true
+  echo !$zoomable
+    ? $img
+    : html::a(url($image->url()), $img, [
+      'class' => 'article-figure__link unstyled-link',
+    ]);
   ?>
 
-  <?php if ($caption) : ?>
-  <figcaption class="article-figure__caption" title="<?= $caption ?>">
-    <?= $caption->html() ?>
+  <?php if ($preview) : ?>
+  <div class="article-figure__fullpreview">
+    <?php snippet('image', [
+      'lazy' => true,
+      'image' => $fullscreen,
+      'attributes' => [
+        'data-zoom-src' => $fullscreen->url()
+      ]
+    ])
+    ?>
+  </div>
+  <?php endif ?>
+
+  <?php if (isset($caption)) : ?>
+  <figcaption class="article-figure__caption">
+    <?= html($caption) ?>
   </figcaption>
-  <?php endif ?>
-
-  <?php if ($zoomable) : ?>
-  <a class="article-figure__link" href="<?= $resized->url() ?>">
-  <?php endif ?>
-
-    <div class="article-figure__image">
-      <?php
-        $size = min(700, $image->width());
-        snippet('image', [
-          'lazy' => true,
-          'image' => $image->focusCrop($size, $size / $ratio, ['quality' => 100]),
-          'caption' => $caption
-        ])
-      ?>
-    </div>
-
-    <?php if ($preview) : ?>
-    <?php // TODO: refactor with only one image ?>
-    <div class="article-figure__fullpreview">
-      <?php snippet('image', [
-          'lazy' => true,
-          'image' => $resized,
-          'caption' => $caption,
-          'attributes' => [
-            'data-zoom-src' => $resized->url()
-          ]
-        ])
-      ?>
-    </div>
-    <?php endif ?>
-
-  <?php if ($zoomable) : ?>
-  </a>
   <?php endif ?>
 
 </figure>

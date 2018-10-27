@@ -26,7 +26,6 @@
   <?php if ($image = $article->cover()->isNotEmpty() ? $article->image($article->cover()) : null) : ?>
     <?php snippet('article-figure', [
       'zoomable' => true,
-      'preview' => true,
       'ratio' => 16/9,
       'image' => $image,
       'class' => 'article__header-cover'

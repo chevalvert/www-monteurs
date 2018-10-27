@@ -22,9 +22,9 @@
                 <a class="publication__link" href="<?= $publication->url() ?>">
                   <?php if ($image = $publication->cover()->isNotEmpty() ? $publication->image($publication->cover()) : null) : ?>
                   <?php snippet('article-figure', [
+                    'lazy' => true,
                     'ratio' => 148/210, // A3 ratio
-                    'zoomable' => false,
-                    'preview' => false,
+                    'width' => 500,
                     'image' => $image,
                     'class' => 'publication__cover'
                   ]) ?>

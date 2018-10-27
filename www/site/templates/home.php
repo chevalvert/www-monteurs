@@ -46,19 +46,19 @@
       <section class="featured__members">
         <header class="featured__members-header" id="actualite-des-adherents">
           <div class="featured__members-header-title" >Actualités des adhérents</div>
-          <?php // snippet('link', ['obj' => $site->page('annoncer-une-actualite')]) ?>
+          <?php //? snippet('link', ['obj' => $site->page('annoncer-une-actualite')]) ?>
         </header>
         <ul class="featured__members-items">
         <?php foreach ($memberNews as $item) : ?>
           <?php if ($image = $item->image($item->cover())) : ?>
           <li class="featured__members-item">
-            <a class="featured__members-item-link" href="<?= $item->url() ?>">
+            <a class="featured__members-item-link" href="<?= $item->url() ?>" title="<?= $item->title() ?>">
               <?php
                 $size = min(400, $image->width());
                 snippet('image', [
                   'lazy' => true,
-                  'image' => $image->focusCrop($size, $size, ['quality' => 100]),
-                  'caption' => $image->caption()
+                  'image' => $image->focusCrop($size, $size, ['quality' => 70]),
+                  'alt' => $item->title()
                 ])
               ?>
             </a>

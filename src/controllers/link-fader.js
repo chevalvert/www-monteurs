@@ -8,7 +8,7 @@ export default ({
   let links = []
 
   elements.forEach(container => {
-    links = links.concat(Array.from(container.querySelectorAll('a'), link => {
+    links = links.concat(Array.from(container.querySelectorAll('a:not(.unstyled-link)'), link => {
       link.container = container
       link.addEventListener('mouseenter', addClass, false)
       link.addEventListener('mouseleave', removeClass, false)

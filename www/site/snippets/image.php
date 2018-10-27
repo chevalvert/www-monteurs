@@ -2,8 +2,8 @@
   class="<?= isset($class) ? $class : '' ?>"
   width="<?= $image->width() ?>"
   height="<?= $image->height() ?>"
-  alt="<?= isset($caption) ? $caption : '' ?>"
-  title="<?= isset($caption) ? $caption : '' ?>"
+  alt="<?= isset($alt) ? $alt : '' ?>"
+  title="<?= isset($alt) ? $alt : '' ?>"
 
   <?php if (isset($attributes)) {
     foreach ($attributes as $attribute => $value) {

@@ -5,7 +5,7 @@ import mediumZoom from 'medium-zoom'
 export default ({
   selector = '.article-figure',
   linkSelector = '.article-figure__link',
-  fullPreviewSelector = '.article-figure__fullpreview img',
+  fullPreviewSelector = 'img',
   activeClass = 'is-open',
   // SEE: https://github.com/francoischalifour/medium-zoom#readme
   zoomOptions = {
@@ -18,7 +18,9 @@ export default ({
 
   figures.forEach(figure => {
     const link = figure.querySelector(linkSelector)
-    const full = figure.querySelector(fullPreviewSelector)
+    const fulls = figure.querySelectorAll(fullPreviewSelector)
+    const full = fulls[fulls.length - 1]
+    console.log(full)
     if (!link || !full) return
 
     figure.zoom = mediumZoom(full, zoomOptions)

@@ -39,6 +39,12 @@ a {
   font-weight: bold;
 }
 
+[data-lozad] {
+  @include easing(500ms, opacity);
+  opacity: 0;
+  &[data-loaded=true] { opacity: 1 }
+}
+
  pre {
   width: 100%;
   overflow: auto;
