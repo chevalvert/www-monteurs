@@ -34,7 +34,8 @@ kirbytext::$tags['image'] = array(
 
     return snippet('article-figure', [
       'class' => $tag->attr('class'),
-      'caption' => $alt,
+      'alt' => $alt,
+      'caption' => $caption,
       'image' => $file,
       'ratio' => $tag->attr('ratio'),
       'zoomable' => $tag->attr('zoomable'),
