@@ -148,6 +148,8 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       margin: 1em 0;
       @include layout (print) { page-break-inside: avoid }
 
+      em { font-style: normal }
+
       p {
         @include font-size('quote');
         font-style: italic;

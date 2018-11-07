@@ -1,0 +1,95 @@
+Title: Bac à sable
+
+----
+
+Text: 
+
+# Introduction à Markdown
+
+Notez tout d'abord la syntaxe pour les titres : une ligne commençant par un dièse # suivi d'un espace permet de créer un nouveau titre. Le nombre de dièses indique le niveau du titre. Il existe six niveaux de titre, de H1 (#) à H6 (######). 
+
+Par soucis de lecture/écriture, il est conseillé de toujours laisser un saut de ligne après un titre.
+
+
+# Gras et italique
+
+En markown, toute mise en forme est directement encodé dans le texte brut. Un texte gras sera placé entre **quatres astérisques**, tandis qu'un texte italique sera mis entre _deux underscores_.
+
+Il est également possible de mettre du texte en italique avec *seulement deux astérisques*, mais l'utilisation des underscores rend généralement la lecture et l'écriture d'un texte markdown plus simple.
+
+# Barré
+
+Il est possible de barrer du texte en l'encadrant de ~~deux tildes de chaque côtés~~.
+
+# Liens
+
+Il existe deux syntaxes pour insérer un lien :
+
+- la syntaxe markdown officielle : [texte du lien](http://example.com)
+- la syntaxe kirby : (link: http://example.com text: texte du lien)
+
+Lorsqu'un lien n'a pas besoin d'avoir un texte particulier, sachez que Kirby détecte automatiquement les liens, et que vous pouvez simplement écrire http://example.com.
+
+# Saut de lignes & paragraphes
+
+Pour revenir à la ligne dans un paragraphe, un saut de ligne suffit.
+Deux sauts de lignes crééront un nouveau paragraphe, comme le lorem ipsum ci-dessous par exemple :
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Omnia contraria, quos etiam insanos esse vultis. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. -, sed ut hoc iudicaremus, non esse in iis partem maximam positam beate aut secus vivendi. Res tota, Torquate, non doctorum hominum, velle post mortem epulis celebrari memoriam sui nominis. Duo Reges: constructio interrete. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Heri, inquam, ludis commissis ex urbe profectus veni ad vesperum. Quicquid porro animo cernimus, id omne oritur a sensibus; In schola desinis. Quis hoc dicit? Fortemne possumus dicere eundem illum Torquatum?
+
+# Citations
+
+> Ceci est un bloc de citation. Il peut contenir des [liens](http://google.fr/), de _l'italique_ et du **gras**.
+Comme pour au-dessus, il est possible de revenir à la ligne.
+
+> Notez qu'un double saut de ligne créera un nouveau paragraphe et fera sortir du bloc de citation, qu'il faudra réactiver avec un `>`.
+
+# Listes à puces
+
+Il est possible de faire des listes à puces en utilisant au choix les caractères `-`, `+`, ou `*` :
+* un élément
++ un deuxième élement
+- un troisième élément
+
+Pour faire des sous-listes, il suffit d'indenter avec au moins deux espaces :
++ un élément
+  + un sous-élément
+  + un deuxième sous-élément
++ un deuxième élément
+
+Les listes peuvent également être numérotées :
+1. le premier élément
+2. le deuxième élément
+3. le troisième élément
+
+**Attention** : il est généralement déconseillé d'utiliser les listes pour hiérarchiser du contenu. Un titre = une hiérarchie. Les listes sont plutôt réservées à de petites énumérations, comme une liste de courses, d'ingrédients, d'adresses, etc.
+
+# Images
+
+Il est possible d'insérer des images dans le texte en utilisant la syntaxe suivante : 
+
+(image: chevalvert.png)
+
+Accessoirement, les options suivantes peuvent êtres définies : 
+
+- `zoomable: true` afin de rendre une image zoomable
+- `caption: légende de l'image` afin de forcer une légende particulière. Notez que par défaut, la légende du champs "légende de l'image" du fichier sera utilisé.
+- `width: 400` pour forcer une taille d'image maximum. Notez que cette option est à utiliser avec parcimonie, et qu'en règle général le markdown ne devrait pas contenir d'informations de mise en page (c'est un langage sémantique).
+
+# Fichiers
+
+Dans la barre latérale du panel, il est possible de télécharger des fichiers qui ne sont pas des images. Cela peut-être pratique pour permettre le téléchargement à un fichier pdf par exemple. La syntaxe que Kirby met à votre disposition quasi-identique à celle des liens : 
+
+(file: test.pdf text: un fichier pdf)
+
+# Embeds
+
+Kirby met à disposition deux syntaxes pour l'embed de vidéos : 
+
+(youtube: https://www.youtube.com/watch?v=C0DPdy98e4c)
+(vimeo: https://vimeo.com/70591644)
+
+# Ressources complémentaires
+
+- https://getkirby.com/docs/content/text
+- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet

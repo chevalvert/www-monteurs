@@ -7,7 +7,7 @@ import sidebar from 'components/sidebar'
 import figure from 'components/article-figure'
 // import drawer from 'components/mobile-drawer'
 
-export default view('default|publication|member-new|form.add-member-new', {
+export default view('default|publication|member-new|form.add-member-new|sandbox', {
   onEnterCompleted: refs => {
     refs.lfader = linkFader()
     refs.lazy = lazy()
