@@ -10,6 +10,8 @@
 
   &__translation {
     @include layout (print) { display: none }
+    // NOTE: tanslation is always on its own line
+    display: block;
   }
 
   &__time + &__categories::before { content: '\2014' }
