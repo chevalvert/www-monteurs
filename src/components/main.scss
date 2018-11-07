@@ -1,3 +1,5 @@
+$hovered-link-fadedEl--selectors: p, ul, ol, table;
+
 .main {
   &__header {
     display: flex;
@@ -43,10 +45,17 @@
 
     &-description {
       margin-top: 1em;
+
+      &.has-hovered-link {
+        #{$hovered-link-fadedEl--selectors} {
+          color: $color--transparent-white !important
+        }
+      }
     }
 
     a {
-      color: $color--white;
+      color: $color--white !important;
+      border-color: $color--white !important;
       border-color: inherit;
     }
   }
