@@ -3,8 +3,6 @@
     'debug' => true,
     'cache' => false,
     'ssl' => false,
-    // NOTE: this disable typography internal caching
-    'typography.debug' => true,
     'plugin.html.minifier.active' => false
   ]);
 
