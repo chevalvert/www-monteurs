@@ -20,7 +20,7 @@ export default ({
     const link = figure.querySelector(linkSelector)
     const fulls = figure.querySelectorAll(fullPreviewSelector)
     const full = fulls[fulls.length - 1]
-    console.log(full)
+
     if (!link || !full) return
 
     figure.zoom = mediumZoom(full, zoomOptions)

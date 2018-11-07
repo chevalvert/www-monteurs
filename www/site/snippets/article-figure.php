@@ -2,7 +2,7 @@
   $ratio = isset($ratio) ? $ratio : $image->ratio();
   $width = min(isset($width) ? $width : 700, $image->width());
   $height = isset($height) ? $height : $width / $ratio;
-  $quality = isset($quality) ? $quality : 80;
+  $quality = isset($quality) ? $quality : 100;
 
   $thumbnail = $image->focusCrop($width, $height, compact('quality'));
 
