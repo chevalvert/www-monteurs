@@ -10,6 +10,8 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
     @include layout (print) {
       background: transparent;
       padding: 0;
+      // NOTE: this is for Firefox
+      display: block;
     }
 
     &-pusher {
@@ -69,6 +71,9 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       flex-direction: column;
       padding: 0;
     }
+
+    // NOTE: this is for Firefox
+    @include layout (print) { display: block }
   }
 
   &__sidebar {

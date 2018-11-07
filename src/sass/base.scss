@@ -30,7 +30,11 @@ body {
     opacity: 0;
   }
 
-  @include layout (print) { background: transparent }
+  @include layout (print) {
+    background: transparent;
+    // NOTE: this is for Firefox
+    display: block;
+  }
 }
 
 a {
