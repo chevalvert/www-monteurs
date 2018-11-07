@@ -175,8 +175,8 @@ $featured__banner--scroll-animation--duration: (100s, 50s);
 
         @include layout (full, compact) {
           @include easing($easing-duration, filter);
-          filter: opacity(0.75) grayscale(1);
         }
+        filter: opacity(0.75) grayscale(1);
       }
       &:hover img { filter: opacity(1) grayscale(0) }
     }
