@@ -20,7 +20,7 @@
         ]) ?>
       </aside>
       <div class="main__content">
-      <?php foreach ($page->children()->visible() as $article) : ?>
+      <?php foreach ($page->children()->sortBy('date', 'DESC')->visible() as $article) : ?>
       <?php snippet('article-excerpt', [
         'article' => $article,
         'length' => 300
