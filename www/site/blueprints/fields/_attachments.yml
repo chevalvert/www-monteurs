@@ -1,18 +1,26 @@
 label: Liens et fichiers joints
-style: table
 type: structure
+style: table
+entry:
+  - text
+  - page
+  - file
+  - url
 fields:
   text:
     label: Texte du lien (optionnel)
     type: text
     icon: font
-  url:
-    label: URL du lien…
-    type: url
-    width: 1/2
+  hr:
+    type: line
+  page:
+    label: Page interne…
+    type: page
   file:
-    label: …ou fichier
+    label: …ou fichier…
     type: select
     options: files
-    width: 1/2
+  url:
+    label: …ou URL du lien
+    type: url
 
