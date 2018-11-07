@@ -18,6 +18,8 @@
         if ($level > $maxLevel) return;
 
         if (!is_array($entry) && strlen($entry->text) > 0) {
+          if ($entry->level > $maxLevel) return;
+
           $li = brick('li');
           $a = brick('a', $entry->text, [
             'class' => 'toc-link',
@@ -41,7 +43,6 @@
     foreach ($toc as $firstLevelEntry) {
       $li = brick('li');
       $li->append(build($firstLevelEntry, $maxLevel));
-      // $li = build($firstLevelEntry, $maxLevel);
       $html->append($li);
     }
 
