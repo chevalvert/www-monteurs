@@ -86,3 +86,4 @@ www/site/plugins/feed
 www/site/plugins/kirby-html-minifier
 www/site/widgets/kirby-backup-widget
 # </KirbyWebpack>
+*.bak
