@@ -25,6 +25,9 @@
   }
 
   function attachmentToLink ($page, $attachment) {
+    // NOTE: this allows passing $attachment as simple ['title' => '', 'url' => ''] array
+    if (is_array($attachment)) return $attachment;
+
     $url = r($attachment->url()->isNotEmpty(), $attachment->url());
     $file = r($attachment->file()->isNotEmpty(), $page->file($attachment->file()));
     if ($file) $url = $file->url();

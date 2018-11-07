@@ -26,7 +26,10 @@
             snippet('link', ['obj' => $site->page('annoncer-une-actualite')], true)
           ],
           'toc' => $page->text()->toc(1),
-          'attachments' => $page->attachments()->toStructure()
+          'attachments' => [
+            ['title' => 'Partager sur Facebook', 'url' => 'https://www.facebook.com/sharer/sharer.php?u=' . escape::url($page->url())],
+            ['title' => 'Partager sur Twitter', 'url' => 'https://twitter.com/home?status=' . escape::url($page->url())]
+          ]
         ]) ?>
       </aside>
       <div class="main__content">
