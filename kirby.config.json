@@ -17,7 +17,8 @@
       "hidebar": "https://github.com/jongacnik/kirby-hidebar-field.git",
       "kirby-hidebar-field": "https://github.com/jongacnik/kirby-hidebar-field.git",
       "feed": "https://github.com/getkirby-plugins/feed-plugin.git",
-      "kirby-html-minifier": "https://github.com/kirby-deprecated-plugins/kirby-html-minifier.git"
+      "kirby-html-minifier": "https://github.com/kirby-deprecated-plugins/kirby-html-minifier.git",
+      "translations": "https://github.com/flokosiol/kirby-translations.git"
     },
     "tags": {},
     "widgets": {

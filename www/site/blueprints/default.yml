@@ -5,6 +5,8 @@ pages: false
 files: false
 
 fields:
+  translations: _translation
+
   title:
     label: Titre
     type:  text

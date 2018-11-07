@@ -101,6 +101,17 @@ c::set([
   'typography.hyphenation.compounds' => false,
   'typography.dewidow' => true,
 
+  'translations.translation' => [
+    'en' => [
+      'lbl_is_up_to_date' => 'Translation is up to date',
+      'btn_cancel' => 'Annuler',
+      'btn_delete' => 'Supprimer',
+      'alert_update' => 'Cette action remettra à zéro le fichier. Tout changement sera perdu.',
+      'sync' => 'Synchroniser',
+      'with' => 'avec',
+    ]
+  ],
+
   'focus.field.fullwidth' => true,
   'widget.backup.include_site' => true,
   'widget.quickadd.pageURIs' => [

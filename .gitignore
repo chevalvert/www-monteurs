@@ -84,6 +84,7 @@ www/site/plugins/hidebar
 www/site/plugins/kirby-hidebar-field
 www/site/plugins/feed
 www/site/plugins/kirby-html-minifier
+www/site/plugins/translations
 www/site/widgets/kirby-backup-widget
 # </KirbyWebpack>
 *.bak
