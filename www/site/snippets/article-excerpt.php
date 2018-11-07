@@ -7,10 +7,14 @@
       </a>
     </h1>
     <?php if ($image = $article->cover()->isNotEmpty() ? $article->image($article->cover()) : null) : ?>
-    <?php snippet('article-figure', [
-      'ratio' => 16/9,
-      'image' => $image,
-      'class' => 'article__header-cover'
+    <?php snippet('link', [
+      'obj' => $article,
+      'class' => 'article__header-cover-link',
+      'content' => snippet('article-figure', [
+        'ratio' => 16/9,
+        'image' => $image,
+        'class' => 'article__header-cover'
+      ], true)
     ]) ?>
     <?php endif ?>
   </header>

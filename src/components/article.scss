@@ -19,6 +19,12 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
     }
 
     &-cover {
+      &-link {
+        display: block;
+        margin-top: 1em;
+        line-height: 0;
+      }
+
       width: 100%;
       img {
         width: 100%;
