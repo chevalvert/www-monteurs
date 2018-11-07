@@ -82,13 +82,14 @@ $featured__banner--scroll-animation--duration: (100s, 50s);
         flex: 0;
         @include font-size('h1');
         text-transform: uppercase;
-
       }
 
       &-cover {
         flex: 1;
         // NOTE: background-position is declared inline using kirby-focus
         background-size: cover;
+        margin: $gutter;
+        margin-top: 0;
       }
     }
   }
@@ -100,8 +101,7 @@ $featured__banner--scroll-animation--duration: (100s, 50s);
     width: min-content;
     will-change: transform;
 
-    // ???
-    // &:hover { animation-play-state: paused !important }
+    &:hover { animation-play-state: paused !important }
 
     &:nth-child(even) { animation: featured__banner-scroll-animation--left nth($featured__banner--scroll-animation--duration, 1) linear infinite }
     &:nth-child(even) &-item { @include cicada((background-color, ($color--green, $color--yellow, $color--blue, $color--lightblue, $color--red))) }
