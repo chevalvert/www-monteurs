@@ -12,34 +12,36 @@
 ?>
 
 <figure class="article-figure <?= isset($class) ? $class : '' ?>">
-  <?php
-  $img = snippet('image', [
-    'lazy' => true,
-    'class' => 'article-figure__image',
-    'image' => $thumbnail,
-    'alt' => isset($caption) ? $caption : $image->caption()
-  ], true);
-
-  // NOTE: wrap img element inside a link if $zoomable is set to true
-  echo !$zoomable
-    ? $img
-    : html::a(url($image->url()), $img, [
-      'class' => 'article-figure__link unstyled-link',
-    ]);
-  ?>
-
-  <?php if ($preview) : ?>
-  <div class="article-figure__fullpreview">
-    <?php snippet('image', [
+  <div class="article-figure__wrapper">
+    <?php
+    $img = snippet('image', [
       'lazy' => true,
-      'image' => $fullscreen,
-      'attributes' => [
-        'data-zoom-src' => $fullscreen->url()
-      ]
-    ])
+      'class' => 'article-figure__image',
+      'image' => $thumbnail,
+      'alt' => isset($caption) ? $caption : $image->caption()
+    ], true);
+
+    // NOTE: wrap img element inside a link if $zoomable is set to true
+    echo !$zoomable
+      ? $img
+      : html::a(url($image->url()), $img, [
+        'class' => 'article-figure__link unstyled-link',
+      ]);
     ?>
+
+    <?php if ($preview) : ?>
+    <div class="article-figure__fullpreview">
+      <?php snippet('image', [
+        'lazy' => true,
+        'image' => $fullscreen,
+        'attributes' => [
+          'data-zoom-src' => $fullscreen->url()
+        ]
+      ])
+      ?>
+    </div>
+    <?php endif ?>
   </div>
-  <?php endif ?>
 
   <?php if (isset($caption)) : ?>
   <figcaption class="article-figure__caption">

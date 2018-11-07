@@ -1,8 +1,9 @@
 .article-figure {
-  position: relative;
-  width: 100%;
-
-  @include layout (print) { width: 50% }
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    @include layout (print) { width: 50% }
+  }
 
   &__caption {
     @include font-size('quote');
@@ -48,5 +49,5 @@
   }
 
   &__fullpreview.is-open,
-  &:hover &__fullpreview { opacity: 1 }
+  &__wrapper:hover &__fullpreview { opacity: 1 }
 }

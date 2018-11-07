@@ -28,7 +28,8 @@
       'zoomable' => true,
       'ratio' => 16/9,
       'image' => $image,
-      'class' => 'article__header-cover'
+      'class' => 'article__header-cover',
+      'caption' => $image->caption()
     ]) ?>
   <?php endif ?>
   </header>
