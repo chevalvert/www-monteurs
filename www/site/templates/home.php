@@ -45,8 +45,9 @@
 
       <section class="featured__members">
         <header class="featured__members-header" id="actualite-des-adherents">
-          <div class="featured__members-header-title" >Actualités des adhérents</div>
-          <?php //? snippet('link', ['obj' => $site->page('annoncer-une-actualite')]) ?>
+          <div class="featured__members-header-title">
+            <?php snippet('link', ['obj' => $site->page('actualite-des-adherents')]) ?>
+          </div>
         </header>
         <ul class="featured__members-items">
         <?php foreach ($memberNews as $item) : ?>

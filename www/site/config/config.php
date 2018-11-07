@@ -71,12 +71,6 @@ c::set([
           die('Unauthorized access');
         }
       }
-    ],
-    [
-      'pattern' => 'actualite-des-adherents',
-      'action' => function () {
-        go(site()->homePage() . '#actualite-des-adherents');
-      }
     ]
   ]
 ]);

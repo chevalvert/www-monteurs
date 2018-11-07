@@ -19,10 +19,10 @@ fields:
     columns:
       parsedDate:
         label: Date
-        width: 100
+        width: 80
       parsedVisibility:
         label: Statut
-        width: 20
+        width: 80
       title: Titre
       categories: Catégorie(s)
 
