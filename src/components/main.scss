@@ -7,6 +7,10 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
     color: $color--white;
     padding: $gutter;
 
+    @include layout (mobile) {
+      padding-bottom: 0
+    }
+
     @include layout (print) {
       background: transparent;
       padding: 0;
@@ -84,7 +88,7 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       width: 100%;
       margin-top: -1px;
       background-color: $color--dynamic;
-      padding: $gutter;
+      padding-bottom: $gutter;
       * { color: $color--white }
     }
   }

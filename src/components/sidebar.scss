@@ -3,6 +3,10 @@
 
   li { color: $color--lightgray }
 
+  @include layout (mobile) {
+    * { color: $color--white !important }
+  }
+
   a {
     @include easing($easing-duration, color);
     &:hover,
@@ -15,6 +19,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @include layout (mobile) { padding: 0 $gutter }
 
     &.is-sticked {
       position: fixed;
@@ -40,12 +46,9 @@
     .filter {
       @include font-size('sidebar');
       text-transform: lowercase;
-    }
-  }
 
-  @include layout (mobile) {
-    * { color: $color--white !important }
-    &__nav + &__footer { margin-top: $gutter }
+      @include layout (mobile) { margin-top: $gutter }
+    }
   }
 
   &__footer {
@@ -55,6 +58,8 @@
     .pagination {
       @include hide-scroll__parent;
       height: 1.2em;
+
+      @include layout (mobile) { margin-top: $gutter }
 
       ul {
         @include hide-scroll__child(x);
@@ -67,6 +72,10 @@
       }
     }
 
-    &-attachments {}
+    &-attachments {
+      @include layout (mobile) {
+        li:first-of-type { margin-top: $gutter }
+      }
+    }
   }
 }
