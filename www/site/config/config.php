@@ -99,6 +99,8 @@ c::set([
   'typography.hyphenation.titlecase' => false,
   'typography.hyphenation.allcaps' => false,
   'typography.hyphenation.compounds' => false,
+  'typography.math' => false,
+  'typography.fractions' => false,
   'typography.dewidow' => true,
 
   'translations.translation' => [
