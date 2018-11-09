@@ -23,7 +23,7 @@
       'panel.page.read' => true,
       'panel.page.create' => true,
       'panel.page.update' => true,
-      'panel.page.delete' => true,
+      'panel.page.delete' => false,
       'panel.page.url' => true,
       'panel.page.visibility' => true,
 
