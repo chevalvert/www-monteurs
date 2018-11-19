@@ -75,7 +75,7 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
     a:not(.unstyled-link) {
       font-weight: inherit;
       color: $color--black;
-      padding-bottom: 1px;
+      // padding-bottom: 1px;
       border-bottom: 2px solid $color--dynamic;
 
       @include layout (print) {
