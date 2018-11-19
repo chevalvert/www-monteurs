@@ -28,6 +28,16 @@
                     'image' => $image,
                     'class' => 'publication__cover'
                   ]) ?>
+                  <?php else: ?>
+                    <div class="publication__cover publication__cover--placeholder">
+                      <div class="publication__cover--placeholder-background">
+                        <span><?= $publication->title()->kirbytext() ?></span>
+                      </div>
+                      <div class="publication__cover--placeholder-title">
+                        <div class="publication__cover--placeholder-title-logo"><?php snippet('svg/logo--compact') ?></div>
+                        <?= $publication->title()->kirbytext() ?>
+                      </div>
+                    </div>
                   <?php endif ?>
                   <?php snippet('label', [
                     'article' => $publication,

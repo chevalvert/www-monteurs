@@ -22,7 +22,46 @@
 .publication {
   &__link { display: block }
 
-  &__cover { margin-bottom: 1em }
+  &__cover {
+    margin-bottom: 1em;
+    &--placeholder {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 141.8918919%; // A3 ratio
+      background-color: $color--dynamic;
+      overflow: hidden;
+      pointer-events: none;
+      &-title {
+        z-index: 1;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+        font-size: 2.5rem;
+        line-height: 1em;
+        color: $color--black;
+        text-transform: uppercase;
+        &-logo {
+          position: absolute;
+          top: -0.5em;
+          transform: translateY(-100%);
+        }
+      }
+      &-background {
+        position: absolute;
+        bottom: 0.5em;
+        width: 200%;
+        left: -1ch;
+        color: $color--white;
+        font-size: 12rem;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 0.5ch;
+      }
+    }
+  }
   &:hover .article-figure__fullpreview { opacity: 1 }
 
   .label { color: $color--dynamic }
@@ -32,3 +71,9 @@
     text-transform: uppercase;
   }
 }
+
+.publications__item:nth-child(2n+1) .publication__cover--placeholder { background-color: $color--red }
+.publications__item:nth-child(3n+2) .publication__cover--placeholder { background-color: $color--green }
+.publications__item:nth-child(5n+3) .publication__cover--placeholder { background-color: $color--yellow }
+.publications__item:nth-child(7n+5) .publication__cover--placeholder { background-color: $color--lightblue }
+.publications__item:nth-child(11n+7) .publication__cover--placeholder { background-color: $color--green }
