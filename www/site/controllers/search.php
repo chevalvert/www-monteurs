@@ -10,7 +10,14 @@ return function($site, $pages, $page) {
     })
     // NOTE: slug to search for unaccentuated chars (ie: categories, which are stored slugged)
     ->search($query . ' ' . str::slug($query, ' '), [
-      'words' => true
+      // Match partial words
+      'words' => false,
+      'fields' => [
+        'title',
+        'categories',
+        'description',
+        'text'
+      ]
     ]);
 
   return compact('query', 'results');
