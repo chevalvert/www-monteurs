@@ -13,6 +13,7 @@ c::set([
   'sitemap.ignore' => [
     'home',
     'feed',
+    'bac-a-sable',
     'annoncer-une-actualite',
     'sitemap',
     'erreur',
