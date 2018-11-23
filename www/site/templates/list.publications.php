@@ -29,7 +29,7 @@
                     'class' => 'publication__cover'
                   ]) ?>
                   <?php else: ?>
-                    <div class="publication__cover publication__cover--placeholder">
+                    <div class="publication__cover publication__cover--placeholder" data-color="<?= $publication->color() ?>">
                       <div class="publication__cover--placeholder-background">
                         <span><?= $publication->title()->kirbytext() ?></span>
                       </div>

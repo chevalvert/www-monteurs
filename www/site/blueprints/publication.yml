@@ -55,6 +55,23 @@ fields:
   cover:
     label: Image de couverture (optionnel)
     type: image
+    width: 2/3
+
+  color:
+    label: Couleur de la couverture de substitution
+    type: select
+    default: green
+    options:
+      black: Noir
+      lightgray: Gris
+      blue: Bleu foncé
+      lightblue: Bleu clair
+      green: Vert
+      yellow: Orange
+      red: Rouge
+    required: true
+    width: 1/3
+    help: Utilisé si aucune image de couverture
 
   text:
     label: Texte

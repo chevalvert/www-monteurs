@@ -29,9 +29,18 @@
       width: 100%;
       height: 0;
       padding-bottom: 141.8918919%; // A3 ratio
-      background-color: $color--dynamic;
       overflow: hidden;
       pointer-events: none;
+
+      background-color: $color--dynamic;
+      &[data-color="black"] { background-color: $color--black }
+      &[data-color="lightgray"] { background-color: $color--lightgray }
+      &[data-color="blue"] { background-color: $color--blue }
+      &[data-color="lightblue"] { background-color: $color--lightblue }
+      &[data-color="green"] { background-color: $color--green }
+      &[data-color="yellow"] { background-color: $color--yellow }
+      &[data-color="red"] { background-color: $color--red }
+
       &-title {
         z-index: 1;
         position: absolute;
@@ -71,9 +80,3 @@
     text-transform: uppercase;
   }
 }
-
-.publications__item:nth-child(2n+1) .publication__cover--placeholder { background-color: $color--red }
-.publications__item:nth-child(3n+2) .publication__cover--placeholder { background-color: $color--green }
-.publications__item:nth-child(5n+3) .publication__cover--placeholder { background-color: $color--yellow }
-.publications__item:nth-child(7n+5) .publication__cover--placeholder { background-color: $color--green }
-.publications__item:nth-child(11n+7) .publication__cover--placeholder { background-color: $color--lightblue }
