@@ -23,7 +23,7 @@
       <aside class="main__sidebar">
         <?php snippet('sidebar', [
           'actions' => [
-            r($page->buy()->isNotEmpty(), '<a href="'. $page->buy() .'" target="_blank">commander '. ($page->price()->isNotEmpty() ? '(' . number_format($page->price()->value(), 2, ',', ' ') . '€)' : '') .'</a>')
+            r($page->buy()->isNotEmpty(), '<a href="'. $page->buy() .'" target="_blank">commander '. ($page->price()->isNotEmpty() ? '(' . number_format($page->price()->value(), 2, ',', ' ') . '&thinsp;&euro;)' : '') .'</a>')
           ],
           'attachments' => $page->attachments()->toStructure()
         ]) ?>
