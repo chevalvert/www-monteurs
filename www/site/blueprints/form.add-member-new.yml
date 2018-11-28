@@ -53,9 +53,13 @@ fields:
     type: markdown
 
   fail:
-    label: Message d'erreur
+    label: Message d'erreur technique
+    type: markdown
+
+  invalid:
+    label: Message d'erreur lorsque un champ est manquant ou invalide.
     type: markdown
 
   unauthorized:
-    label: Message de token eroné
+    label: Message de token erroné
     type: markdown

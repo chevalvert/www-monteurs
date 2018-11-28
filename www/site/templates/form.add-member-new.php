@@ -71,7 +71,7 @@
               <?php endif ?>
 
               <?php if (isset($alert[$field_id])) : ?>
-              <span class="form__field-error"><?= html($messages[$field_id]) ?></span>
+              <span class="form__field-error"><?= kirbytext($messages[$field_id]) ?></span>
               <?php endif ?>
             </div>
             <?php endforeach ?>

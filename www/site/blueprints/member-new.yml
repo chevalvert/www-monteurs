@@ -45,18 +45,23 @@ fields:
     readonly: true
     width: 1/2
 
-  location:
+  diffusion:
     label: Diffusion
     readonly: true
     width: 1/2
 
-  links:
-    label: Liens
+  copyright:
+    label: Copyright de l'image
     readonly: true
     width: 1/2
 
   team:
     label: Équipe
+    type: textarea
+    readonly: true
+
+  presentation:
+    label: Présentation
     type: textarea
     readonly: true
 

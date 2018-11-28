@@ -21,18 +21,20 @@
       'email' => 'e-mail invalide',
       'token' => "Un jeton d'authentification est nécessaire pour l'ajout d'une actualité",
       'default' => 'champ obligatoire',
+      'image' => 'Champ obligatoire
+        Fichiers acceptés : JPEG, PNG, 800&times;800 pixels minimum'
     ];
 
     $fields = [
       'email' => createField('e-mail', 'email', ['required', 'email'], $err_messages['email']),
       'token' => createField('token', 'text', ['required'], $err_messages['token']),
       'title' => createField('titre', 'text', ['required'], $err_messages['default']),
-      'location' => createField('diffusion', 'text', ['required'], $err_messages['default']),
+      'diffusion' => createField('diffusion', 'text', ['required'], $err_messages['default']),
       'dates' =>createField('date(s)', 'text', ['required'], $err_messages['default']),
       'team' => createField('équipe', 'textarea', ['required'], $err_messages['default']),
-      'description' => createField('présentation', 'textarea'),
-      'image' => createField('image', 'file', ['required'], $err_messages['default']),
-      'links' => createField('liens')
+      'presentation' => createField('présentation', 'textarea'),
+      'image' => createField('image', 'file', ['required'], $err_messages['image']),
+      'copyright' => createField("copyright de l'image")
     ];
 
     $data = [];
@@ -57,10 +59,11 @@
       }
 
       $image = isset($_FILES['image']) ? $_FILES['image'] : '';
-      // ???: test $image['size'] and $image['type']
+      $data['image'] = $image['name'];
 
       if (($invalid = invalid($data, $rules, $messages))) {
         $alert = $invalid;
+        $failed = $page->invalid();
       } else if ($data['token'] != $page->token()) {
         $failed = $page->unauthorized();
         $err = 'token : ' . $data['token'];
@@ -73,9 +76,9 @@
           $email = email([
             'service' => 'html-mail',
             'to'      => $site->mailto(),
-            'subject' => 'Une nouvelle actualité est en attente de validation',
+            'subject' => '[panel kirby] Nouvelle actualité en attente de validation',
             'body'    => '
-              Une nouvelle actualité est en attente de validation : <a href="' . PanelHelpers::getPanelURL($newPage, 'edit') . '">' . $newPage->title()->html() . '</a>
+              Une nouvelle actualité des adhérents est en attente de validation : <a href="' . PanelHelpers::getPanelURL($newPage, 'edit') . '">' . $newPage->title()->html() . '</a>
             '
           ]);
 
