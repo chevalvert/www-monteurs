@@ -1,20 +1,20 @@
 <meta name="description" content="<?= $site->description()->text() ?>">
 <meta name="keywords" content="<?= $site->keywords()->text() ?>">
 
-<link rel="apple-touch-icon" sizes="180x180" href="<?= $kirby->urls()->assets() ?>/favicons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= $kirby->urls()->assets() ?>/favicons/apple-touch-icon.png?v=3">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<link rel="icon" type="image/png" sizes="32x32" href="<?= $kirby->urls()->assets() ?>/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="<?= $kirby->urls()->assets() ?>/favicons/favicon-16x16.png">
-<link rel="manifest" href="<?= $kirby->urls()->assets() ?>/favicons/manifest.json">
-<link rel="mask-icon" href="<?= $kirby->urls()->assets() ?>/favicons/safari-pinned-tab.svg" color="#000000">
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= $kirby->urls()->assets() ?>/favicons/favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= $kirby->urls()->assets() ?>/favicons/favicon-16x16.png?v=3">
+<link rel="manifest" href="<?= $kirby->urls()->assets() ?>/favicons/manifest.json?v=3">
+<link rel="mask-icon" href="<?= $kirby->urls()->assets() ?>/favicons/safari-pinned-tab.svg?v=3" color="#000000">
+<link rel="shortcut icon" href="favicon.ico?v=3">
 
 <meta name="application-name" content="<?= $site->title() ?>">
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="<?= $kirby->urls()->assets() ?>/favicons/browserconfig.xml">
 
-<meta name="theme-color" content="#000000"
+<meta name="theme-color" content="#ffffff"
 
 <meta property="og:url" content="<?= $site->url() ?>">
 <meta property="og:type" content="website">
