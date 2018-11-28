@@ -1,6 +1,7 @@
 <?php
 
 @include __DIR__ . DS . 'license.php';
+@include __DIR__ . DS . 'credentials.php';
 
 // Core config
 c::set([
@@ -25,8 +26,8 @@ c::set([
   'markdown.extra' => true,
 
   'email.service' => 'mail',
-  'email.from' => 'LMA <contact@monteursassocies.com>',
-  'email.replyTo' => 'noreply@monteursassocies.com',
+  // 'email.from' => SEE: credentials.php
+  // 'email.replyTo' => SEE: credentials.php
 
   'params.names' => [
     'pagination' => 'archive',
@@ -78,6 +79,8 @@ c::set([
 
 // Thrid party configs
 c::set([
+  // 'ga.tracking_id' => SEE: credentials.php
+  //
   'panel.widgets' => [
     'site'     => true,
     'pages'    => true,

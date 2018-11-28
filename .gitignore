@@ -11,6 +11,7 @@ www/site/accounts/*
 www/assets/avatars/*
 !www/assets/avatars/index.html
 www/site/config/license.php
+www/site/config/credentials.php
 
 ### PHP ###
 php-error.log*
