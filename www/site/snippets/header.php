@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="cleartype" content="on">
 
+  <?php snippet('header.analitycs') ?>
   <script>document.getElementsByTagName('html')[0].className = 'js'</script>
 
   <?php // NOTE: every form* template is prevented from being indexed to prevent spam ?>
