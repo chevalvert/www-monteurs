@@ -16,6 +16,6 @@ export default view('default|publication|member-new|form.add-member-new|sandbox'
 
     // TODO: refactor mobile-drawer UX
     // if (mobile) refs.drawer = drawer()
-    if (!mobile) refs.sidebar = sidebar()
+    if (!mobile()) refs.sidebar = sidebar()
   }
 })

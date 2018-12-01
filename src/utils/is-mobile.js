@@ -1,4 +1,6 @@
 import bowser from 'bowser'
 const browser = bowser.getParser(window.navigator.userAgent)
 
-export default browser.getPlatformType(true) === 'mobile'
+const platformIsMobile = browser.getPlatformType(true) === 'mobile'
+
+export default () => platformIsMobile || window.innerWidth < 800

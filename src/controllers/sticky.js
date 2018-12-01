@@ -7,7 +7,7 @@ export default ({
   className = 'is-sticked',
   offy = 0
 } = {}) => {
-  if (mobile) return
+  if (mobile()) return
 
   return observeScroll({
     elements,

@@ -7,7 +7,7 @@ const isOpen = (href, uri) => ~href.indexOf(uri)
 // NOTE: this is the JS equivalent of Kirby $page->isActive()
 const isActive = (href, uri) => !window.location.href.split(uri).pop()
 
-const baseSelector = mobile ? '.menu-mobile' : '.menu'
+const baseSelector = mobile() ? '.menu-mobile' : '.menu'
 const menu = document.querySelector(baseSelector)
 const items = menu.querySelectorAll(`${baseSelector}__nav-item`)
 const links = menu.querySelectorAll(`${baseSelector}__nav-item-link`)

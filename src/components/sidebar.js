@@ -7,7 +7,7 @@ export default ({
   element = document.querySelector('.sidebar__content'),
   margin = 40
 } = {}) => {
-  if (mobile) return
+  if (mobile()) return
   if (!element) return
 
   const container = element.parentNode
