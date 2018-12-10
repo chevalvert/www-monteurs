@@ -13,6 +13,7 @@ fields:
     label: Articles
     type: index
     options: children
+    rows: 25
     filter: PanelHelpers::beautifyPages
     order: desc
     addedit: true
