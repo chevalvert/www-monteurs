@@ -12,7 +12,7 @@
         <?php snippet('label', ['article' => $page]) ?>
         <?php endif ?>
 
-        <h1 class="main__header-title"><?= $page->title()->html() ?></h1>
+        <h1 class="main__header-title"><?= $page->title()->kirbytext() ?></h1>
 
         <?php if ($page->description()->isNotEmpty()) : ?>
         <div class="main__header-description article__content">
