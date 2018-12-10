@@ -16,7 +16,7 @@
       <?php if ($translated) : ?>
         <span class="label__translation">
           <a href="<?= $article->url($lang) ?>">
-            <?= r($lang == 'en', 'go to english version', 'voir la version française') ?>
+            <?= r($lang == 'en', 'in english', 'en français') ?>
           </a>
         </span>
       <?php endif ?>
