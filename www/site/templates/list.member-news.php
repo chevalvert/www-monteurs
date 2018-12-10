@@ -16,11 +16,13 @@
         <?php snippet('sidebar', [
           'actions' => [
             snippet('link', ['obj' => $site->page('annoncer-une-actualite')], true)
-          ]
+          ],
+          'years' => $years,
+          'current_year' => $current_year
         ]) ?>
       </aside>
       <div class="main__content">
-      <?php foreach ($page->children()->sortBy('date', 'DESC')->visible() as $article) : ?>
+      <?php foreach ($articles as $article) : ?>
       <?php snippet('article-excerpt', [
         'article' => $article,
         'length' => 300
