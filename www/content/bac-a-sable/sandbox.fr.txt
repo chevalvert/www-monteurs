@@ -86,8 +86,8 @@ Dans la barre latérale du panel, il est possible de télécharger des fichiers 
 
 Kirby met à disposition deux syntaxes pour l'embed de vidéos : 
 
-(youtube: https://www.youtube.com/watch?v=C0DPdy98e4c)
-(vimeo: https://vimeo.com/70591644)
+(youtube: https://www.youtube.com/watch?v=9buHGeSSjjE)
+(vimeo: https://vimeo.com/255737462)
 
 # Ressources complémentaires
 
