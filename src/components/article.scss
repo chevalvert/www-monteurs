@@ -16,6 +16,14 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
     &-title {
       @include font-size('h1');
       text-transform: uppercase;
+
+      &-prefix {
+        color: $color--dynamic;
+        &::after {
+          content: '\2009\2014\2009';
+          color: $color--black;
+        }
+      }
     }
 
     &-cover {

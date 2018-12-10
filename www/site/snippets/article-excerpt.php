@@ -3,6 +3,9 @@
     <?php snippet('label', compact('article')) ?>
     <h1 class="article__header-title">
       <a class="article__header-title-link" href="<?= $article->url() ?>">
+        <?php if (strpos($article->categories(), 'comptes-rendus')) : ?>
+        <span class="article__header-title-prefix">compte rendu</span>
+        <?php endif ?>
         <?= $article->title()->html() ?>
       </a>
     </h1>
