@@ -126,6 +126,10 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
       height: auto;
     }
 
+    figure {
+      margin: 1em 0;
+    }
+
     figure.video {
       margin: 1em 0;
       position: relative;
