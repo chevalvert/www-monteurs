@@ -12,6 +12,7 @@ fields:
     label: Projets à la une
     type: multiselect
     search: true
+    translate: false
     validate:
       minItems: 1
       maxItems: 2
@@ -26,6 +27,7 @@ fields:
     label: Projets à afficher en bandeau
     type: multiselect
     search: true
+    translate: false
     validate:
       minItems: 2
     options: query

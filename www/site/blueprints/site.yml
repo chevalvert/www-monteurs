@@ -9,10 +9,12 @@ fields:
   title:
     label: Titre du site
     type:  text
+    translate: false
 
   mailto:
     label: Email d'administration
     type: email
+    translate: false
 
   gseo:
     label: SEO
@@ -22,6 +24,7 @@ fields:
     label: Description du site
     type: textarea
     buttons: false
+    translate: false
     icon: search
     help: Utilisé par les moteurs de recherches et les réseaux sociaux
     validate:
@@ -29,6 +32,7 @@ fields:
 
   keywords:
     label: Mots-clefs
+    translate: false
     type: tags
     help: Utilisé par les moteurs de recherches et les réseaux sociaux
 
@@ -36,6 +40,7 @@ fields:
     label: Redirections spécifiques
     type: structure
     style: table
+    translate: false
     fields:
       from:
         label: Ancienne URL
