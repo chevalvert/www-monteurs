@@ -21,7 +21,6 @@ $hovered-link-fadedEl--selectors: p, ul, ol, table;
         color: $color--dynamic;
         &::after {
           content: '\2009\2014\2009';
-          color: $color--black;
         }
       }
     }
