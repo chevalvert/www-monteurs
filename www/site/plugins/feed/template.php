@@ -6,12 +6,15 @@
     <link><?php echo xml($link) ?></link>
     <generator><?php echo c::get('feed.generator', 'Kirby') ?></generator>
     <lastBuildDate><?php echo date('r', $modified) ?></lastBuildDate>
-    <atom:link href="<?php echo xml($url) ?>" rel="self" type="application/rss+xml" />
+    <atom:link href="<?php echo xml(url('feed')) ?>" rel="self" type="application/rss+xml" />
 
     <?php if(!empty($description)): ?>
     <description><?php echo xml($description) ?></description>
     <?php endif ?>
-
+    <?php
+      setlocale(LC_TIME, 'en_US');
+      setlocale(LC_ALL, 'en_US');
+    ?>
     <?php foreach($items as $item): ?>
     <item>
       <title><?php echo xml($item->title()) ?></title>
