@@ -56,19 +56,11 @@
     line-height: inherit;
 
     .pagination {
-      @include hide-scroll__parent;
-      height: 1.2em;
-
       @include layout (mobile) { margin-top: $gutter }
 
-      ul {
-        @include hide-scroll__child(x);
-        display: flex ;
-      }
-
       li {
-        display: block;
-        & + li{ margin-left: 1em }
+        display: inline-block;
+        padding-right: 1em;
       }
     }
 
