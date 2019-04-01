@@ -107,6 +107,9 @@ c::set([
   'typography.fractions' => false,
   'typography.dewidow' => true,
 
+  'kirby.extension.audioext.preload ' => 'auto',
+  'kirby.extension.audioext.audio_tag' => true,
+
   'translations.translation' => [
     'en' => [
       'lbl_is_up_to_date' => 'Translation is up to date',

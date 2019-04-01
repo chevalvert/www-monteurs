@@ -89,6 +89,20 @@ Kirby met à disposition deux syntaxes pour l'embed de vidéos :
 (youtube: https://www.youtube.com/watch?v=9buHGeSSjjE)
 (vimeo: https://vimeo.com/255737462)
 
+# Fichiers audio
+
+Depuis la [version 1.2.0](https://github.com/chevalvert/www-monteurs/tree/1.2.0), il est désormais possible d'ajouter des fichiers audio dans le corps du texte :
+
+(audio: mp3: sample-audio.mp3)
+
+Les formats compatibles sont `m4a`, `mp3`, `ogg`, `wav`, et doivent être spécifiés dans le kirbytag : 
+- `( audio: mp3: mon-fichier.mp3 )`
+- `( audio: ogg: mon-fichier.ogg )` 
+- etc…
+
+_Les espaces entre les parenthèses ont été rajoutés pour permettre la visualisation du kirbytag dans cette page._
+
+
 # Ressources complémentaires
 
 - https://getkirby.com/docs/content/text
