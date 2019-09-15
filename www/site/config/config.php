@@ -92,7 +92,7 @@ c::set([
   ],
 
   'plugin.html.minifier.active' => true,
-  'plugin.html.minifier.blacklist' => ['feed', 'sitemap'],
+  'plugin.html.minifier.blacklist' => ['feed', 'sitemap', 'rechercher'],
 
   'typography.punctuation.spacing.french' => true,
   'typography.dashes.style' => 'em',
