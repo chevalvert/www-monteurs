@@ -10,6 +10,11 @@
       <?php endforeach ?>
       </ul>
     </nav>
+
+    <a id="tempoLogo" href="https://www.tempo-filmeditors.com/" target="_blank">
+      <img src="<?php echo $kirby->urls()->assets() ?>/images/tempo.png" alt="Tempo">
+    </a>
+
     <nav class="footer__misc">
       <ul class="footer__social-items">
       <?php foreach ($site->misc()->toStructure() as $item) : ?>
