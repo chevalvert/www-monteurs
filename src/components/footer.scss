@@ -17,12 +17,11 @@
 
   #tempoLogo {
     @include no-select;
-    // display: none;
-    margin-top: -2.3rem;
-    margin-bottom: -2.5rem;
+    margin-top: -0.7rem;
+    margin-bottom: -1.2rem;
 
     img {
-      max-height: 6rem;
+      max-height: 3rem;
       -ms-interpolation-mode: bicubic;
       vertical-align: bottom;
     }
@@ -54,14 +53,12 @@
 
   @media (max-width: 500px) {
     position: relative;
-    padding-bottom: 10rem;
+    padding-bottom: 5.5rem;
     #tempoLogo {
       position: absolute;
       margin: 0;
       align-self: unset;
       bottom: $gutter;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 }

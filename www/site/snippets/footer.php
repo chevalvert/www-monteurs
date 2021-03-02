@@ -12,7 +12,7 @@
     </nav>
 
     <a id="tempoLogo" href="https://www.tempo-filmeditors.com/" target="_blank">
-      <img src="<?php echo $kirby->urls()->assets() ?>/images/tempo.png" alt="Tempo">
+      <img title="LMA est membre de Tempo, Federations of Film Editors Associations" src="<?php echo $kirby->urls()->assets() ?>/images/tempo.png" alt="Tempo">
     </a>
 
     <nav class="footer__misc">
